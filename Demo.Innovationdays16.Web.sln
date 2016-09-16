@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Innovationdays16.Web", "Demo.Innovationdays16.Web\Demo.Innovationdays16.Web.csproj", "{F3F2C42F-56BA-4AC5-AD7D-AFA8A740B1C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.InnovationDays16.Api", "Demo.InnovationDays16.Api\Demo.InnovationDays16.Api.csproj", "{44AF9D33-15EF-4DFF-B91B-59BB8B063592}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3F2C42F-56BA-4AC5-AD7D-AFA8A740B1C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3F2C42F-56BA-4AC5-AD7D-AFA8A740B1C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3F2C42F-56BA-4AC5-AD7D-AFA8A740B1C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3F2C42F-56BA-4AC5-AD7D-AFA8A740B1C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44AF9D33-15EF-4DFF-B91B-59BB8B063592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44AF9D33-15EF-4DFF-B91B-59BB8B063592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44AF9D33-15EF-4DFF-B91B-59BB8B063592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44AF9D33-15EF-4DFF-B91B-59BB8B063592}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

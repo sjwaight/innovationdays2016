@@ -1,0 +1,134 @@
+﻿@using Demo.Innovationdays16.Web.Models
+@model SessionSelections
+@{
+    ViewBag.Title = "Schedule";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <h2>Sessions</h2>
+
+    @if (Request.IsAuthenticated)
+    {
+        <p>Select your sessions below and then click 'Save Schedule'.</p>
+    }
+    else
+    {
+        <p>If you want to build your session list you need to @Html.ActionLink("login", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" }) first. Don't have account then why not @Html.ActionLink("register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })?</p>
+    }
+    
+    @using (Html.BeginForm("Schedule", "Home", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.id)
+    <table class="table-bordered padding-horizontal-20">
+        <thead>
+            <tr>
+                <th style="text-align: center">Time Slot</th>
+                <th style="text-align: center">ROOM A</th>
+                <th style="text-align: center">ROOM B</th>
+                <th style="text-align: center">ROOM C</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>11:15</strong></td>
+                <td style="vertical-align: top; padding: 10px">
+
+                    <p><strong>Nano Server:  Minimize reboots and improve security with next-gen server deployment</strong></p>
+
+                    <p>​Jeff Alexander, Microsoft</p>
+
+                    <p>With Windows Server 2016 we are drastically changing the footprint with a new install option called Nano Server.  In this session, Jeff Alexander will go through what Nano Server is how we got to this point and how you go about using it in your environment.  Get ready for an action packed session with lots of demos!</p>
+
+                    @if (Request.IsAuthenticated)
+                    {
+                        <p style="background-color: darkgrey"><strong>Select</strong> @Html.RadioButtonFor(m => m.ElevenFifteen, "A")</p>
+                    }
+
+                </td>
+                <td style="vertical-align: top; padding: 10px">
+
+                    <p><strong>Introducing Microsoft PowerApps</strong></p>
+
+                    ​<p>Bill Chesnut, MVP</p>
+
+                    <p>Microsoft MVP and Cloud Evangelist Bill Chesnut will be discussing and demonstrating how Microsoft PowerApps enable people to generate applications that run on mobile devices that connect to resources in both Microsoft Azure, as well as other SaaS providers including SharePoint, Office365, Salesforce, DropBox, and many more. Bill will discuss how PowerApps work and demonstrates creating a PowerApp.</p>
+
+                    @if (Request.IsAuthenticated)
+                    {
+                        <p style="background-color: darkgrey"><strong>Select</strong> @Html.RadioButtonFor(m => m.ElevenFifteen, "B")</p>
+                    }
+                </td>
+                <td style="vertical-align: top; padding: 10px">
+
+                    <p><strong>.Net Core</strong></p>
+
+                    <p>Jordan Knight, Microsoft</p>
+
+                    <p>ASP.NET Core is a lean and composable framework for building web and cloud based applications.  In this session we will investigate what powerful new cloud scenarios are unlocked when you pair ASP.NET Core with new features in the Microsoft Azure Cloud and the next generation of developer productivity tooling and dev-ops from Microsoft.</p>
+
+                    @if (Request.IsAuthenticated)
+                    {
+                        <p style="background-color: darkgrey"><strong>Select</strong> @Html.RadioButtonFor(m => m.ElevenFifteen, "C")</p>
+                    }
+                </td>
+            </tr>
+            <tr>
+                <td><strong>13:55</strong></td>
+                <td style="vertical-align: top; padding: 10px">
+
+                    <p><strong>Azure IoT End-to-End</strong></p>
+
+                    <p>​Martin Abbott</p>
+
+                    <p>
+                        In this session we will cover how to create a full end-to-end IoT solution using parts of the Microsoft Azure IoT ecosystem and a Raspberry Pi.
+                    </p>
+
+                    @if (Request.IsAuthenticated)
+                    {
+                        <p style="background-color: darkgrey"><strong>Select</strong> @Html.RadioButtonFor(m => m.ThirteenFiftyFive, "A")</p>
+                    }
+                </td>
+                <td style="vertical-align: top; padding: 10px">
+
+                    <p><strong>Business Case for Upgrading to SQL Server 2016</strong></p>
+
+                    ​<p>Victor Isakov, MVP</p>
+
+                    <p>
+                        Without a doubt SQL Server 2016 will be an unprecedented release in SQL Server's history. It will easily eclipse all prior versions that have been released in scope of features, technology and breadth of vision.
+                    </p>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <p style="background-color: darkgrey"><strong>Select</strong> @Html.RadioButtonFor(m => m.ThirteenFiftyFive, "B")</p>
+                    }
+                </td>
+                <td style="vertical-align: top; padding: 10px">
+
+                    <p><strong>API Management and Hybrid Integration</strong></p>
+
+                    <p>Bill Chesnut, MVP</p>
+
+                    <p>Microsoft MVP and Cloud Evangelist Bill Chesnut will be discussing and demonstrating how API Management can be the base for your Hybrid Integration design and how APIM's built-in features such as authentication/authorization, reporting, policies, the development portal and more can both facilitate the implementation of your solution and improve operational management of your hybrid integration scenarios.</p>
+
+                    @if (Request.IsAuthenticated)
+                    {
+                        <p style="background-color: darkgrey"><strong>Select</strong> @Html.RadioButtonFor(m => m.ThirteenFiftyFive, "C")</p>
+                    }
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>&nbsp;</p>
+       <div class="@ViewBag.NoticeStlye">
+           @ViewBag.NoticeMessage
+       </div>
+
+        if (Request.IsAuthenticated)
+        {
+            
+            <input type="submit" value="Save Schedule" class="btn btn-primary" />
+        }
+    }
+</div>
