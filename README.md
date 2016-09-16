@@ -9,6 +9,7 @@ In order to get this working you will need an Azure Subscription and have provis
   * A Web App
   * An API App
 * Two App Insights instances
+* Document DB account
 
 Then edit the following files:
 
